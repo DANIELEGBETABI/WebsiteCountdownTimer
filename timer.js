@@ -3,9 +3,11 @@ function getTimeRemaining(endtime) {
   var seconds = Math.floor((t / 1000) % 60);
   var minutes = Math.floor((t / 1000 / 60) % 60);
   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var days = Math.floor(t / (1000 * 60 * 60 * 24) % 7);
+  var weeks = Math.floor(t /  (1000 * 60 * 60 * 24 * 7) % 4)
   return {
     'total': t,
+    'weeks': weeks,
     'days': days,
     'hours': hours,
     'minutes': minutes,
@@ -15,6 +17,7 @@ function getTimeRemaining(endtime) {
 
 function initializeClock(id, endtime) {
   var clock = document.getElementById(id);
+  var weeksSpan = clock.querySelector('.weeks')
   var daysSpan = clock.querySelector('.days');
   var hoursSpan = clock.querySelector('.hours');
   var minutesSpan = clock.querySelector('.minutes');
@@ -23,7 +26,8 @@ function initializeClock(id, endtime) {
   function updateClock() {
     var t = getTimeRemaining(endtime);
 
-    clock.innerHTML = 'days: ' + t.days + '<br>' +
+    clock.innerHTML = 'weeks: ' + t.weeks + '<br>' +
+                      'days: ' + t.days + '<br>' +
                       'hours: '+ t.hours + '<br>' +
                       'minutes: ' + t.minutes + '<br>' +
                       'seconds: ' + t.seconds;
