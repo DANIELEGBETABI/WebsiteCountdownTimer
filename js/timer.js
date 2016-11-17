@@ -32,11 +32,11 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = t.minutes;
     secondsSpan.innerHTML = t.seconds;
 
-    if(t.weeks == 1){document.getElementById("week").innerHTML = "Week"}
-    if(t.days == 1){document.getElementById("day").innerHTML = "Day"}
-    if(t.hours == 1){document.getElementById("hour").innerHTML = "Hour"}
-    if(t.minutes == 1){document.getElementById("minute").innerHTML = "Minute"}
-    if(t.seconds == 1){document.getElementById("second").innerHTML = "Second"}
+    if(t.weeks == 1){document.getElementById("week").innerHTML = "Week"} else{document.getElementById("week").innerHTML = "Weeks"}
+    if(t.days == 1){document.getElementById("day").innerHTML = "Day"} else{document.getElementById("day").innerHTML = "Days"}
+    if(t.hours == 1){document.getElementById("hour").innerHTML = "Hour"} else{document.getElementById("hour").innerHTML = "Hours"}
+    if(t.minutes == 1){document.getElementById("minute").innerHTML = "Minute"} else{document.getElementById("minute").innerHTML = "Minutes"}
+    if(t.seconds == 1){document.getElementById("second").innerHTML = "Second"} else{document.getElementById("second").innerHTML = "Seconds"}
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
