@@ -1,10 +1,11 @@
 body{
 	text-align: center;
 	background-image: url(new_york_night.jpg);
+	background-size: cover;
 	background-repeat: no-repeat;
   background-attachment: fixed;
-	background-position: left center;
-  font-family: Century Gothic;
+	background-position: center center;
+  font-family: 'Raleway', sans-serif;
   font-weight: 100;
 }
 
@@ -47,4 +48,36 @@ h1{
 .smalltext{
 	padding-top: 5px;
 	font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+	html{
+		height:100%;
+		width:100%;
+	}
+	h1{
+	  color: #fff;
+	  font-weight: 100;
+	  font-size: 40px;
+	  margin: 40px 0px 20px;
+	}
+
+	#clockdiv{
+		font-size: 40px;
+	}
+
+	body{
+		text-align: center;
+		background-image: url(new_york_night.jpg);
+		background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+	  font-family: 'Raleway', sans-serif;
+	  font-weight: 100;
+	}
+
+	.smalltext{
+		font-weight: 100;
+	}
 }
