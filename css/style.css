@@ -1,45 +1,50 @@
 body{
 	text-align: center;
-	background: #00ECB9;
-
-  font-family: sans-serif;
+	background-image: url(new_york_night.jpg);
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-position: left center;
+  font-family: Century Gothic;
   font-weight: 100;
 }
 
 h1{
-
-  color: #396;
+  color: #fff;
   font-weight: 100;
   font-size: 40px;
   margin: 40px 0px 20px;
 }
 
 #clockdiv{
-	font-family: sans-serif;
+	height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
 	color: #fff;
 	display: inline-block;
-	font-weight: 100;
+	font-weight: 200;
 	text-align: center;
-	font-size: 30px;
+	font-size: 80px;
 }
 
 #clockdiv > div{
-  width: 70px;
-	padding: 10px;
+	position: static;
+	padding: .5em;
 	border-radius: 3px;
-	background: #00BF96;
+
 	display: inline-block;
 }
 
 #clockdiv div > span{
-  width: 40px;
+
 	padding: 15px;
 	border-radius: 3px;
-	background: #00816A;
 	display: inline-block;
+
 }
 
 .smalltext{
 	padding-top: 5px;
-	font-size: 16px;
+	font-size: 20px;
 }
