@@ -26,16 +26,17 @@ function initializeClock(id, endtime) {
   function updateClock() {
     var t = getTimeRemaining(endtime);
 
-    clock.innerHTML = 'weeks: ' + t.weeks + '<br>' +
-                      'days: ' + t.days + '<br>' +
-                      'hours: '+ t.hours + '<br>' +
-                      'minutes: ' + t.minutes + '<br>' +
-                      'seconds: ' + t.seconds;
+    // clock.innerHTML = 'weeks: ' + t.weeks + '<br>' +
+    //                   'days: ' + t.days + '<br>' +
+    //                   'hours: '+ t.hours + '<br>' +
+    //                   'minutes: ' + t.minutes + '<br>' +
+    //                   'seconds: ' + t.seconds;
 
-    //daysSpan.innerHTML = t.days;
-    //hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    //minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    //secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    weeksSpan.innerHTML = t.weeks;
+    daysSpan.innerHTML = ('0' + t.days).slice(-2);
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
