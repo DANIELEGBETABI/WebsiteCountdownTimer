@@ -32,6 +32,12 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = t.minutes;
     secondsSpan.innerHTML = t.seconds;
 
+    if(t.weeks == 1){document.getElementById("week").innerHTML = "Week"}
+    if(t.days == 1){document.getElementById("day").innerHTML = "Day"}
+    if(t.hours == 1){document.getElementById("hour").innerHTML = "Hour"}
+    if(t.minutes == 1){document.getElementById("minute").innerHTML = "Minute"}
+    if(t.seconds == 1){document.getElementById("second").innerHTML = "Second"}
+
     if (t.total <= 0) {
       clearInterval(timeinterval);
     }
