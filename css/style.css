@@ -11,6 +11,7 @@ body{
 
 h1{
   color: #fff;
+	text-shadow: 1px 1px 1px #000;
   font-weight: 100;
   font-size: 40px;
   margin: 40px 0px 20px;
@@ -27,6 +28,8 @@ h1{
 	font-weight: 200;
 	text-align: center;
 	font-size: 80px;
+	text-shadow: 1px 1px 1px #000;
+	'Josefin Slab', serif
 }
 
 #clockdiv > div{
@@ -48,6 +51,7 @@ h1{
 .smalltext{
 	padding-top: 5px;
 	font-size: 20px;
+	color: #fff;
 }
 
 @media only screen and (max-width: 700px) {
@@ -59,11 +63,18 @@ h1{
 	  color: #fff;
 	  font-weight: 100;
 	  font-size: 40px;
-	  margin: 40px 0px 20px;
+	  margin: 20px 0px 20px;
+		text-shadow: 1px 1px 1px #000;
 	}
 
 	#clockdiv{
 		font-size: 40px;
+		text-shadow: 1px 1px 1px #000;
+
+	}
+
+	#clockdiv div > span{
+		padding-top:0px;
 	}
 
 	body{
@@ -79,5 +90,6 @@ h1{
 
 	.smalltext{
 		font-weight: 100;
+		font-size: 20px;
 	}
 }
