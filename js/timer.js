@@ -41,6 +41,10 @@ function initializeClock(id, endtime) {
     if (t.total <= 0) {
       clearInterval(timeinterval);
     }
+
+    if(t.seconds == 0){
+      document.getElementById("image").href = "images/2.png"
+    }
   }
 
   updateClock();
