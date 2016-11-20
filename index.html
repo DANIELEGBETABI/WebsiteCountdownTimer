@@ -53,7 +53,14 @@
 
     <script src="js/timer.js"></script>
 
-    <a class="fancybox" href="image/image.jpg"><button type="button" class="btn">What's in here?</button></a>
+    <a class="fancybox" id="img"><button type="button" class="btn" id='button'>What's in here?</button></a>
+
+    <script type="text/javascript">
+  document.getElementById("button").onclick = function() {
+    document.getElementById("img").setAttribute('href', "image/image.jpg?"+Math.random());
+    return false;
+  };
+</script>
 
 
 </body>
