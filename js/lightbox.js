@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#image").fancybox({
+  $('.fancybox').fancybox({
         helpers: {
             title : {
                 type : 'float'
@@ -7,7 +7,8 @@ $(document).ready(function() {
         }
     });
 
-  $("#single_2").fancybox({
+
+  $("#image2").fancybox({
     openEffect	: 'elastic',
     closeEffect	: 'elastic',
 
