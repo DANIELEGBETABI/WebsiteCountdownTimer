@@ -17,32 +17,35 @@ h1{
   margin: 40px 0px 20px;
 }
 
-#clockdiv{
-	height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
+p{
 	color: #fff;
-	display: inline-block;
-	font-weight: 200;
+	font-size: 20px;
+	text-shadow: 1px 1px 1px #000;
+	text
+}
+
+#clockdiv{
+
+	color: #fff;
 	text-align: center;
 	font-size: 80px;
 	text-shadow: 1px 1px 1px #000;
-	'Josefin Slab', serif
+
 }
 
 #clockdiv > div{
-	position: static;
-	padding: .5em;
-	border-radius: 3px;
 
+	padding-top: 30px;
+	padding-right: 50px;
+	padding-left: 50px;
 	display: inline-block;
 }
 
 #clockdiv div > span{
 
-	padding: 15px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
 	border-radius: 3px;
 	display: inline-block;
 
@@ -92,6 +95,9 @@ h1{
 	top:1px;
 }
 
+
+
+
 @media only screen and (max-width: 700px) {
 	html{
 		height:100%;
@@ -105,9 +111,20 @@ h1{
 		text-shadow: 1px 1px 1px #000;
 	}
 
+	p{
+		font-size: 20px;
+	}
+
 	#clockdiv{
 		font-size: 40px;
 		text-shadow: 1px 1px 1px #000;
+
+	}
+
+	#clockdiv > div{
+		padding-top: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
 
 	}
 

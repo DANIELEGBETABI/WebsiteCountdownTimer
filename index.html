@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <meta charset="UTF-8">
   <title>NYC Timer!</title>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway|Cinzel|Poiret+One|Didact+Gothic|Josefin+Slab" rel="stylesheet">
 
   <!-- Add jQuery library -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-<!-- Add fancyBox -->
-<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+  <!-- Add fancyBox -->
+  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1.0">
   <link rel="stylesheet" type="text/css" media="only screen and (max-width: 500px)" href="/css/style.css" />
   <meta name="viewport" content="width=device-width" />
+
 </head>
 
 <body>
 
   <script type "text/javascript" src="js/lightbox.js"></script>
 
-  <h1>Countdown Clock</h1>
-<div id="clockdiv">
+  <h1>NYC Countdown</h1>
 
-  <div class>
-    <span class="weeks"></span>
-    <div class="smalltext" id="week">Weeks</div>
+  <div id="clockdiv">
+
+    <div class>
+      <span class="weeks"></span>
+      <div class="smalltext" id="week">Weeks</div>
+    </div>
+
+    <div>
+      <span class="days"></span>
+      <div class="smalltext" id="day">Days</div>
+    </div>
+
+    <div>
+      <span class="hours"></span>
+      <div class="smalltext" id="hour">Hours</div>
+    </div>
+
+    <div>
+      <span class="minutes"></span>
+      <div class="smalltext" id="minute">Minutes</div>
+    </div>
+
+    <div>
+      <span class="seconds"></span>
+      <div class="smalltext" id="second">Seconds</div>
+    </div>
+
   </div>
 
-  <div>
-    <span class="days"></span>
-    <div class="smalltext" id="day">Days</div>
-  </div>
+  <p>Of Impatience<br><br><b>Love you Kelsey --Kyle</b></p>
 
-  <div>
-    <span class="hours"></span>
-    <div class="smalltext" id="hour">Hours</div>
-  </div>
 
-  <div>
-    <span class="minutes"></span>
-    <div class="smalltext" id="minute">Minutes</div>
-  </div>
+  <script src="js/timer.js"></script>
 
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext" id="second">Seconds</div>
-  </div>
-</div>
+  <a class="fancybox" id="img"><button type="button" class="btn" id='button'>Daily Picture!</button></a>
 
-    <script src="js/timer.js"></script>
-
-    <a class="fancybox" id="img"><button type="button" class="btn" id='button'>What's in here?</button></a>
-
-    <script type="text/javascript">
-  document.getElementById("button").onclick = function() {
-    document.getElementById("img").setAttribute('href', "image/image.jpg?"+Math.random());
-    return false;
-  };
-</script>
+  <script type="text/javascript">
+    document.getElementById("button").onclick = function() {
+      document.getElementById("img").setAttribute('href', "image/image.jpg?"+Math.random());
+      return false;
+    };
+  </script>
 
 
 </body>
