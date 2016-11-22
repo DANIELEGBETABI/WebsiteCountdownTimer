@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+
   <meta charset="UTF-8">
   <title>NYC Timer!</title>
 
@@ -52,19 +52,18 @@
       <span class="seconds"></span>
       <div class="smalltext" id="second">Seconds</div>
     </div>
-
   </div>
 
-  <p>Of Impatience<br><br><b>Love you Kelsey --Kyle</b></p>
+  <p>of being excitedly impatient<br><br><b>Love you Kelsey --Kyle</b></p>
 
 
-  <script src="js/timer.js"></script>
+  <script src="js/timer.js?v=1.0"></script>
 
   <a class="fancybox" id="img"><button type="button" class="btn" id='button'>Daily Picture!</button></a>
 
   <script type="text/javascript">
     document.getElementById("button").onclick = function() {
-      document.getElementById("img").setAttribute('href', "image/image.jpg?"+Math.random());
+      document.getElementById("img").setAttribute('href', "image/image.png?"+Math.random());
       return false;
     };
   </script>
