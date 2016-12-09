@@ -1,3 +1,5 @@
+
+
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
@@ -38,8 +40,47 @@ function initializeClock(id, endtime) {
     if(t.minutes == 1){document.getElementById("minute").innerHTML = "Minute"} else{document.getElementById("minute").innerHTML = "Minutes"}
     if(t.seconds == 1){document.getElementById("second").innerHTML = "Second"} else{document.getElementById("second").innerHTML = "Seconds"}
 
+    if (t.days == 0){
+      document.getElementById("weekObject").style.display = 'none';
+      document.getElementById("dayObject").style.display = 'none';
+    }
     if (t.total <= 0) {
       clearInterval(timeinterval);
+
+
+      document.getElementById("weekObject").innerHTML = "NYC WE MADE IT";
+      document.getElementById("weekObject").style.color = 'green';
+      document.getElementById("footerObject").innerHTML = "What are you doing looking at this, go hug me already"
+      document.getElementById("footerObject2").innerHTML = "but actually"
+      document.getElementById("footerObject3").innerHTML = "Love you so much Kelsey"
+
+      $(document).ready(function(){
+        $('#weekObject').css({'opacity':0});
+        $('#footerObject').css({'opacity':0});
+        $('#footerObject2').css({'opacity':0});
+        $('#footerObject3').css({'opacity':0});
+        setTimeout(function() {
+          $('#weekObject').css({'opacity':0}).animate({'opacity':1});
+      }, 500);
+
+      setTimeout(function() {
+        $('#footerObject').css({'opacity':0}).animate({'opacity':1});
+    }, 2000);
+
+    setTimeout(function() {
+      $('#footerObject2').css({'opacity':0}).animate({'opacity':1});
+  }, 3000);
+
+  setTimeout(function() {
+    $('#footerObject3').css({'opacity':0}).animate({'opacity':1});
+}, 5000);
+      });
+
+
+      document.getElementById("dayObject").style.display = 'none';
+      document.getElementById("hourObject").style.display = 'none';
+      document.getElementById("minuteObject").style.display = 'none';
+      document.getElementById("secondObject").style.display = 'none';
     }
   }
 
@@ -47,5 +88,5 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = "2016-12-11"
+var deadline = "2016-12-9"
 initializeClock('clockdiv', deadline);
