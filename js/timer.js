@@ -34,21 +34,24 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = t.minutes;
     secondsSpan.innerHTML = t.seconds;
 
-    if(t.weeks == 1){document.getElementById("week").innerHTML = "Week"} else{document.getElementById("week").innerHTML = "Weeks"}
-    if(t.days == 1){document.getElementById("day").innerHTML = "Day"} else{document.getElementById("day").innerHTML = "Days"}
-    if(t.hours == 1){document.getElementById("hour").innerHTML = "Hour"} else{document.getElementById("hour").innerHTML = "Hours"}
-    if(t.minutes == 1){document.getElementById("minute").innerHTML = "Minute"} else{document.getElementById("minute").innerHTML = "Minutes"}
-    if(t.seconds == 1){document.getElementById("second").innerHTML = "Second"} else{document.getElementById("second").innerHTML = "Seconds"}
+
+      if(t.weeks == 1){document.getElementById("week").innerHTML = "Week"} else{document.getElementById("week").innerHTML = "Weeks"}
+      if(t.days == 1){document.getElementById("day").innerHTML = "Day"} else{document.getElementById("day").innerHTML = "Days"}
+      if(t.hours == 1){document.getElementById("hour").innerHTML = "Hour"} else{document.getElementById("hour").innerHTML = "Hours"}
+      if(t.minutes == 1){document.getElementById("minute").innerHTML = "Minute"} else{document.getElementById("minute").innerHTML = "Minutes"}
+      if(t.seconds == 1){document.getElementById("second").innerHTML = "Second"} else{document.getElementById("second").innerHTML = "Seconds"}
 
     if (t.days == 0){
       document.getElementById("weekObject").style.display = 'none';
       document.getElementById("dayObject").style.display = 'none';
+
+      if(t.seconds == 1){document.getElementById("second").innerHTML = "Second!"} else{document.getElementById("second").innerHTML = "Seconds!"}
+
     }
     if (t.total <= 0) {
       clearInterval(timeinterval);
 
-
-      document.getElementById("weekObject").innerHTML = "NYC WE MADE IT";
+      document.getElementById("weekObject").innerHTML = "NYC! WE MADE IT";
       document.getElementById("weekObject").style.color = 'green';
       document.getElementById("footerObject").innerHTML = "What are you doing looking at this, go hug me already"
       document.getElementById("footerObject2").innerHTML = "but actually"
@@ -73,7 +76,7 @@ function initializeClock(id, endtime) {
 
   setTimeout(function() {
     $('#footerObject3').css({'opacity':0}).animate({'opacity':1});
-}, 5000);
+}, 4000);
       });
 
 
@@ -88,5 +91,5 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = "2016-12-9"
+var deadline = "2016-12-10 23:59"
 initializeClock('clockdiv', deadline);
